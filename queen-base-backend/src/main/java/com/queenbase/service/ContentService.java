@@ -1,6 +1,7 @@
 package com.queenbase.service;
 
 import com.queenbase.entity.Content;
+import com.queenbase.entity.ContentType;
 import com.queenbase.repository.ContentRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -36,8 +37,9 @@ public class ContentService {
 
        Content content = new Content();
        content.setTitle(title);
-       content.setType(Enum.valueOf(com.queenbase.entity.ContentType.class, type));
+       content.setType(ContentType.valueOf(type));
        content.setFilePath(filePath);
+
 
        return repository.save(content);
     }

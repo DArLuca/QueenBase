@@ -2,7 +2,6 @@ package com.queenbase.entity;
 
 
 import jakarta.persistence.*;
-import jdk.jfr.ContentType;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
